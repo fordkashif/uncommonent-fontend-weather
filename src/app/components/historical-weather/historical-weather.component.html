@@ -1,0 +1,23 @@
+<div class="historical-container" *ngIf="paginatedData && paginatedData.length > 0; else noData">
+  <div *ngFor="let item of paginatedData" class="historical-day">
+    <!-- Date Display -->
+    <div class="historical-date">{{ item.date | date: 'EEE, MMM d' }}</div>
+    
+    <!-- High and Low Temperatures -->
+    <div class="historical-temp">
+      <span class="temp-max">High: {{ item.temperature_2m_max | number: '1.0-0' }}°C</span> / 
+      <span class="temp-min">Low: {{ item.temperature_2m_min | number: '1.0-0' }}°C</span>
+    </div>
+  </div>
+
+  <!-- Pagination Controls -->
+  <div class="pagination-controls">
+    <button (click)="goToPreviousPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="goToNextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+</div>
+
+<ng-template #noData>
+  <p>No historical data available for this location.</p>
+</ng-template>

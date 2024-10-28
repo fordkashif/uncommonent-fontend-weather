@@ -1,0 +1,5 @@
+<div class="search-bar">
+    <input type="text" (keyup.enter)="searchCity()" placeholder="Enter city name" [(ngModel)]="cityName" />
+    <p-button icon="pi pi-search" [rounded]="true" (click)="searchCity()" severity="secondary" [outlined]="true" />
+  </div>
+  

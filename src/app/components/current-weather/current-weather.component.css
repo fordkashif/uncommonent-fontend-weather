@@ -1,0 +1,161 @@
+.current-weather-container {
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Default Background and Text Colors */
+.default-weather {
+  background: linear-gradient(to bottom, #1b1f3a, #0c0e1c);
+  color: #ffffff; /* Light text on dark background */
+}
+
+/* Color schemes and text colors for different weather conditions */
+.sunny {
+  background: linear-gradient(to bottom, #FFD700, #FFA500); /* Yellow for sunny days */
+  color: #333333; /* Dark text on light background */
+}
+
+.cloudy {
+  background: linear-gradient(to bottom, #B0C4DE, #778899); /* Gray for cloudy weather */
+  color: #333333; /* Dark text on light background */
+}
+
+.rainy {
+  background: linear-gradient(to bottom, #A9A9A9, #696969); /* Dark gray for rainy days */
+  color: #ffffff; /* Light text on dark background */
+}
+
+.stormy {
+  background: linear-gradient(to bottom, #2F4F4F, #000000); /* Dark tones for stormy weather */
+  color: #ffffff; /* Light text on dark background */
+}
+
+.snowy {
+  background: linear-gradient(to bottom, #E0FFFF, #B0E0E6); /* Light blue for snowy days */
+  color: #333333; /* Dark text on light background */
+}
+
+.foggy {
+  background: linear-gradient(to bottom, #C0C0C0, #808080); /* Gray for foggy/misty conditions */
+  color: #333333; /* Dark text on light background */
+}
+
+.hazy {
+  background: linear-gradient(to bottom, #FFDAB9, #FFA07A); /* Warm tones for hazy conditions */
+  color: #333333; /* Dark text on light background */
+}
+
+.dusty {
+  background: linear-gradient(to bottom, #DAA520, #8B4513); /* Brownish tones for dusty/sandy conditions */
+  color: #ffffff; /* Light text on dark background */
+}
+
+.tornado {
+  background: linear-gradient(to bottom, #A9A9A9, #2F4F4F); /* Dark gray tones for tornado */
+  color: #ffffff; /* Light text on dark background */
+}
+
+.windy {
+  background: linear-gradient(to bottom, #87CEFA, #4682B4); /* Light blue tones for windy conditions */
+  color: #333333; /* Dark text on light background */
+}
+
+/* Inner Styling */
+.location-info {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  font-weight: bold;
+}
+
+.time {
+  font-size: 0.8rem;
+}
+
+.weather-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.temperature {
+  font-size: 5rem;
+  font-weight: 300;
+  flex: 1 1 auto;
+  min-width: 100px;
+}
+
+.condition-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  flex: 1 1 auto;
+  min-width: 100px;
+}
+
+.condition {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.day-night-temp {
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+.weather-icon {
+  font-size: 4rem;
+  transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .temperature {
+    font-size: 3rem;
+  }
+
+  .weather-details {
+    flex-direction: column;
+  }
+
+  .condition {
+    font-size: 1rem;
+  }
+
+  .weather-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .temperature {
+    font-size: 2.5rem;
+  }
+
+  .weather-details {
+    gap: 0.5rem;
+  }
+
+  .condition {
+    font-size: 0.9rem;
+  }
+
+  .weather-icon {
+    font-size: 2.5rem;
+  }
+}

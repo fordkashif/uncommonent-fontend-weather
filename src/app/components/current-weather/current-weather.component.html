@@ -1,0 +1,22 @@
+<div class="current-weather-container" [ngClass]="weatherClass">
+  <!-- Location and Time -->
+  <div class="location-info">
+    <div class="location">{{ data?.name }}, {{ data?.sys?.country }}</div>
+    <div class="time">As of {{ data?.dt * 1000 | date: 'hh:mm a zzz' }}</div> <!-- Convert Unix time to JavaScript date -->
+  </div>
+
+  <!-- Temperature and Icon -->
+  <div class="weather-details">
+    <div class="temperature">{{ data?.main?.temp | number:'1.0-0' || '0' }}°</div>
+    
+    <div class="condition-info">
+      <div class="condition">{{ data?.weather[0]?.description || 'Clear' | titlecase }}</div>
+      <div class="day-night-temp">
+        Day {{ data?.main?.temp_max | number:'1.0-0' }}° • Night {{ data?.main?.temp_min | number:'1.0-0' }}°
+      </div>
+    </div>
+
+    <!-- Weather Icon -->
+    <i [ngClass]="getWeatherIcon(data?.weather[0]?.main)" class="weather-icon"></i>
+  </div>
+</div>

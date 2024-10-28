@@ -1,0 +1,113 @@
+.app-container {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  /* Styles for the current weather card */
+  .current-weather-card {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Styles for forecast and historical weather cards */
+  .forecast-cards, .historical-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .day-card {
+    width: calc(50% - 0.5rem);
+    padding: 1rem;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Temperature style */
+  .temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  /* Weather icon style */
+  .weather-icon {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Color Schemes Based on Weather Conditions */
+  .sunny {
+    background-color: #87ceeb; /* Light blue for sunny days */
+  }
+  
+  .cloudy {
+    background-color: #b0c4de; /* Light steel blue for cloudy days */
+  }
+  
+  .rainy {
+    background-color: #778899; /* Darker gray for rainy days */
+  }
+  
+  .default-weather {
+    background-color: #a9a9a9; /* Default color */
+  }
+  
+  .error-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    z-index: 10; /* Ensure it overlays other content */
+  }
+  
+  .error-content {
+    text-align: center;
+  }
+  
+  .error-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .error-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .error-content button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .error-content button:hover {
+    background-color: #0056b3;
+  }
