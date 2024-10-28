@@ -60,14 +60,14 @@ A feature-rich, responsive weather dashboard built with **Angular** and **PrimeN
    ```
 
 4. Set up API keys:
-   - Register on [OpenWeatherMap](https://openweathermap.org/) and [Open-Meteo](https://open-meteo.com/) to obtain API keys.
-   - Create an `environment.ts` file in `src/environments/` and add your API keys:
+   - Register on [OpenWeatherMap](https://openweathermap.org/) obtain API keys. 
+   - Create an `environment.ts` file in `src/environments/` and add your API keys: 
+   - (An API was left in the code for testing)
 
      ```typescript
      export const environment = {
        production: false,
-       openWeatherApiKey: 'YOUR_OPENWEATHERMAP_API_KEY',
-       openMeteoApiKey: 'YOUR_OPEN_METEO_API_KEY'
+       openWeatherApiKey: 'YOUR_OPENWEATHERMAP_API_KEY'
      };
      ```
 
@@ -105,10 +105,8 @@ weather-dashboard/
 │   │   │   └── weather-utils.service.ts # Utilities for icons and conditions
 │   │   ├── app.component.ts         # Main Application Component
 │   │   └── app.module.ts            # Module declaration
-│   ├── environments/
-│   │   └── environment.ts           # Environment variables (API keys)
-│   └── assets/
-│       └── icons/                   # Weather icons
+│   └─── environments/
+│      └─── environment.ts           # Environment variables (API keys)   
 └── README.md
 ```
 
